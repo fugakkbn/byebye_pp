@@ -8,17 +8,17 @@ Gem::Specification.new do |spec|
   spec.authors = ["fugakkbn"]
   spec.email = ["aax.chiri@gmail.com"]
 
-  spec.summary = "TODO: Write a short summary, because RubyGems requires one."
-  spec.description = "TODO: Write a longer description or delete this line."
-  spec.homepage = "TODO: Put your gem's website or public repo URL here."
+  spec.summary = "byebye_pp makes stdout easier to read."
+  spec.description = "Output the separator line, the variable name of the object and inspections are output."
+  spec.homepage = "https://github.com/fugakkbn/byebye_pp"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
+  spec.metadata["allowed_push_host"] = "https://github.com/fugakkbn/byebye_pp"
 
   spec.metadata["homepage_uri"] = spec.homepage
-  spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
-  spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.metadata["source_code_uri"] = "https://github.com/fugakkbn/byebye_pp"
+  spec.metadata["changelog_uri"] = "https://github.com/fugakkbn/byebye_pp/blob/main/CHANGELOG.md"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
