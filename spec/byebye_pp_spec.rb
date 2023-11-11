@@ -2,6 +2,6 @@
 
 describe 'ByeByePp' do
   it 'has a version number' do
-    expect(ByebyePp::VERSION).not_to be nil
+    expect(ByebyePp::VERSION).not_to be_nil
   end
 end

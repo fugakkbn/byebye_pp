@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "byebye_pp/version"
+require_relative 'byebye_pp/version'
 
 module ByebyePp
   class Error < StandardError; end

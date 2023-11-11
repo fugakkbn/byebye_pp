@@ -1,13 +1,353 @@
-AllCops:
-  TargetRubyVersion: 2.6
+require:
+  - rubocop-rspec
 
+AllCops:
+  TargetRubyVersion: 3.2.0
+  SuggestExtensions: false
+  NewCops: enable
+
+Layout/BeginEndAlignment:
+  Enabled: true
+
+# Align `when` with `end`.
+Layout/CaseIndentation:
+  Enabled: true
+  EnforcedStyle: end
+
+Layout/DefEndAlignment:
+  Enabled: true
+
+Layout/EmptyLineAfterGuardClause:
+  Enabled: true
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+Layout/EmptyLines:
+  Enabled: true
+
+# Ruby coding rule of ESM, inc.
+Layout/EmptyLinesAroundAccessModifier:
+  Enabled: true
+  EnforcedStyle: around
+
+Layout/EmptyLinesAroundExceptionHandlingKeywords:
+  Enabled: true
+
+Layout/ExtraSpacing:
+  Enabled: true
+
+Layout/HeredocIndentation:
+  Enabled: true
+
+# Ruby coding rule of ESM, inc.
+Layout/IndentationConsistency:
+  Enabled: true
+  EnforcedStyle: normal
+
+Layout/SpaceAroundBlockParameters:
+  Enabled: true
+
+Layout/SpaceBeforeBrackets:
+  Enabled: true
+
+Layout/SpaceInLambdaLiteral:
+  Enabled: true
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Enabled: true
+
+Layout/SpaceInsideBlockBraces:
+  Enabled: true
+  SpaceBeforeBlockParameters: true
+  EnforcedStyleForEmptyBraces: no_space
+
+# Ruby coding rule of ESM, inc.
+Layout/SpaceInsideHashLiteralBraces:
+  Enabled: true
+  EnforcedStyle: no_space
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Enabled: true
+
+Layout/SpaceInsideRangeLiteral:
+  Enabled: true
+
+Layout/SpaceInsideStringInterpolation:
+  Enabled: true
+
+Lint/Debugger:
+  Enabled: true
+  DebuggerMethods:
+    # Groups are available so that a specific group can be disabled in
+    # a user's configuration, but are otherwise not significant.
+    Kernel:
+      - binding.irb
+      - p # `p` is an extended config.
+    Byebug:
+      - byebug
+      - remote_byebug
+      - Kernel.byebug
+      - Kernel.remote_byebug
+    Capybara:
+      - save_and_open_page
+      - save_and_open_screenshot
+    PP:
+      - PP.pp # `PP.pp` is an extended config.
+      - pp # `pp` is an extended config.
+    Pry:
+      - binding.pry
+      - binding.remote_pry
+      - binding.pry_remote
+      - Pry.rescue
+    Rails:
+      - debugger
+      - Kernel.debugger
+    WebConsole:
+      - binding.console
+
+Lint/IneffectiveAccessModifier:
+  Enabled: true
+
+Lint/NonAtomicFileOperation:
+  Enabled: true
+
+Lint/OrderedMagicComments:
+  Enabled: true
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: true
+
+Lint/RedundantStringCoercion:
+  Enabled: true
+
+Lint/RefinementImportMethods:
+  Enabled: true
+
+Lint/SendWithMixinArgument:
+  Enabled: true
+
+Lint/ShadowedArgument:
+  Enabled: true
+
+Lint/Syntax:
+  Enabled: true
+
+Lint/UselessAccessModifier:
+  Enabled: true
+
+Lint/Void:
+  Enabled: true
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: true
+
+Naming/PredicateName:
+  Enabled: true
+
+Style/CommentAnnotation:
+  Enabled: true
+
+Style/EmptyElse:
+  Enabled: true
+  EnforcedStyle: empty
+  AllowComments: true
+
+Style/EmptyLambdaParameter:
+  Enabled: true
+
+Style/FileRead:
+  Enabled: true
+
+Style/FileWrite:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: true
+
+Style/HashSyntax:
+  Enabled: true
+
+Style/IfWithBooleanLiteralBranches:
+  Enabled: true
+
+Style/InverseMethods:
+  Enabled: true
+
+Style/MapToSet:
+  Enabled: true
+
+Style/MethodCallWithoutArgsParentheses:
+  Enabled: true
+
+Style/MultilineIfThen:
+  Enabled: true
+
+Style/MultilineTernaryOperator:
+  Enabled: true
+
+Style/MultilineWhenThen:
+  Enabled: true
+
+Style/NegatedIf:
+  Enabled: true
+
+Style/NestedTernaryOperator:
+  Enabled: true
+
+Style/PercentLiteralDelimiters:
+  Enabled: true
+  PreferredDelimiters:
+    default: ()
+    '%i': '()'
+    '%I': '()'
+    '%r': '||'
+    '%w': '()'
+    '%W': '()'
+
+Style/RedundantArgument:
+  Enabled: true
+
+Style/RedundantArrayConstructor:
+  Enabled: true
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/RedundantConstantBase:
+  Enabled: true
+
+Style/RedundantEach:
+  Enabled: true
+
+Style/RedundantDoubleSplatHashBraces:
+  Enabled: true
+
+Style/RedundantFilterChain:
+  Enabled: true
+
+Style/RedundantHeredocDelimiterQuotes:
+  Enabled: true
+
+Style/RedundantInitialize:
+  Enabled: true
+
+Style/RedundantParentheses:
+  Enabled: true
+
+Style/RedundantRegexpArgument:
+  Enabled: true
+
+Style/RedundantRegexpConstructor:
+  Enabled: true
+
+Style/RedundantSort:
+  Enabled: true
+
+Style/SafeNavigation:
+  Enabled: true
+
+Style/SelectByRegexp:
+  Enabled: true
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/StringChars:
+  Enabled: true
+
+# Ruby coding rule of ESM, inc.
 Style/StringLiterals:
   Enabled: true
-  EnforcedStyle: double_quotes
+  EnforcedStyle: single_quotes
 
-Style/StringLiteralsInInterpolation:
+Style/SymbolProc:
   Enabled: true
-  EnforcedStyle: double_quotes
+  AllowMethodsWithArguments: true
 
-Layout/LineLength:
-  Max: 120
+Style/TrailingCommaInArguments:
+  Enabled: true
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+
+Style/YAMLFileRead:
+  Enabled: true
+
+RSpec/BeEq:
+  Enabled: true
+
+RSpec/BeNil:
+  Enabled: true
+
+RSpec/EmptyLineAfterExample:
+  Enabled: true
+
+RSpec/EmptyLineAfterExampleGroup:
+  Enabled: true
+
+RSpec/EmptyLineAfterFinalLet:
+  Enabled: true
+
+RSpec/EmptyLineAfterHook:
+  Enabled: true
+
+RSpec/EmptyLineAfterSubject:
+  Enabled: true
+
+RSpec/ExpectChange:
+  Enabled: true
+  EnforcedStyle: block
+
+RSpec/ExcessiveDocstringSpacing:
+  Enabled: true
+
+RSpec/Focus:
+  Enabled: true
+  # Prevents autocorrectoin when developing on LSP.
+  AutoCorrect: false
+
+RSpec/ImplicitBlockExpectation:
+  Enabled: true
+
+RSpec/ImplicitExpect:
+  Enabled: true
+
+RSpec/PredicateMatcher:
+  Enabled: true
+
+RSpec/RepeatedExampleGroupDescription:
+  Enabled: true
+  
+RSpec/SpecFilePathFormat:
+  Enabled: true
+
+RSpec/SpecFilePathSuffix:
+  Enabled: true
+
+RSpec/UnspecifiedException:
+  Enabled: true
+
+# Copyright (c) 2023 ESM, Inc
+
+# Permission is hereby granted, free of charge, to any person obtaining
+# a copy of this software and associated documentation files (the
+# "Software"), to deal in the Software without restriction, including
+# without limitation the rights to use, copy, modify, merge, publish,
+# distribute, sublicense, and/or sell copies of the Software, and to
+# permit persons to whom the Software is furnished to do so, subject to
+# the following conditions:
+
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+# LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+# WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
