@@ -1,8 +1,17 @@
 # frozen_string_literal: true
 
-require_relative 'byebye_pp/version'
+require 'byebye_pp/version'
 
 module ByebyePp
-  class Error < StandardError; end
-  # Your code goes here...
+  def bbpp(obj)
+    text = <<~TEXT
+      #{'=' * 40}
+      class: #{obj.class}
+      inspect: #{obj.inspect}
+    TEXT
+
+    puts text
+  end
 end
+
+Kernel.include ByebyePp

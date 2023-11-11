@@ -148,6 +148,9 @@ Naming/PredicateName:
 Style/CommentAnnotation:
   Enabled: true
 
+Style/Documentation:
+  Enabled: false
+
 Style/EmptyElse:
   Enabled: true
   EnforcedStyle: empty
