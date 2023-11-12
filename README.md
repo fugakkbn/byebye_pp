@@ -1,24 +1,63 @@
 # ByebyePp
 
-TODO: Delete this and the text below, and describe your gem
+ByeByePp is gem for debug.
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/byebye_pp`. To experiment with that code, run `bin/console` for an interactive prompt.
+Are you writing code like the following for debug? If so, this gem will help.
+
+```ruby
+a = 'This is A.'
+b = 10
+c = %w[one two three]
+
+pp '=' * 40
+pp a.class
+pp a.inspect
+
+pp '=' * 40
+pp b.class
+pp b.inspect
+
+.
+.
+```
 
 ## Installation
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+Install the `byebye_pp` gem. `$ gem install byebye_pp` from the command line, or add a line in your Gemfile.
 
-Install the gem and add to the application's Gemfile by executing:
-
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_PRIOR_TO_RELEASE_TO_RUBYGEMS_ORG
+```sh
+$ gem byebye_pp
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+All that remains is to pass the debugging target to the `bbpp` method.
+
+```ruby
+require 'byebye_pp'
+
+a = 'This is A.'
+b = 10
+c = %w[one two three]
+
+bbpp a
+bbpp b
+bbpp c
+```
+
+The following output is obtained by `#bbpp`.
+
+```sh
+========================================
+class: String
+inspect: "This is A."
+========================================
+class: Integer
+inspect: 10
+========================================
+class: Array
+inspect: ["one", "two", "three"]
+```
 
 ## Development
 
@@ -28,12 +67,8 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/byebye_pp. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/byebye_pp/blob/main/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/fugakkbn/byebye_pp.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ByebyePp project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/byebye_pp/blob/main/CODE_OF_CONDUCT.md).
