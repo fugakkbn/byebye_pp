@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    byebye_pp (0.1.0)
+    byebye_pp (0.1.1)
 
 GEM
   remote: https://rubygems.org/
