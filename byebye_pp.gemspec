@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = 'Output the separator line, the variable name of the object and inspections are output.'
   spec.homepage = 'https://github.com/fugakkbn/byebye_pp'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.2.0'
+  spec.required_ruby_version = '>= 2.6'
 
   spec.metadata['allowed_push_host'] = 'https://github.com/fugakkbn/byebye_pp'
 

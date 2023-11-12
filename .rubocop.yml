@@ -2,7 +2,7 @@ require:
   - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 3.2.0
+  TargetRubyVersion: 2.6
   SuggestExtensions: false
   NewCops: enable
 
@@ -324,7 +324,7 @@ RSpec/PredicateMatcher:
 
 RSpec/RepeatedExampleGroupDescription:
   Enabled: true
-  
+
 RSpec/SpecFilePathFormat:
   Enabled: true
 
